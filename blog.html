@@ -1,0 +1,367 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blog & Resources - KDTech Solutions</title>
+    
+    <!-- Bootstrap 5 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Bootstrap Icons -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css" rel="stylesheet">
+    <!-- FontAwesome -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+    <!-- AOS Animation Library -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <!-- Custom CSS -->
+    <link href="css/style.css" rel="stylesheet">
+</head>
+<body>
+
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-dark fixed-top" id="navbar">
+        <div class="container">
+            <a class="navbar-brand fw-bold" href="index.html">
+                <i class="bi bi-cpu-fill me-2"></i>KDTech
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="services.html">Services</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="products.html">Products</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="contact.html">Contact</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" href="blog.html">Blog</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Page Header -->
+    <section class="page-header bg-primary text-white py-5">
+        <div class="container">
+            <div class="row">
+                <div class="col-12 text-center" data-aos="fade-up">
+                    <h1 class="display-4 fw-bold mb-3">Blog & Resources</h1>
+                    <p class="lead">Stay updated with the latest tech trends and insights</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Blog Categories -->
+    <section class="py-3 bg-light">
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <div class="d-flex justify-content-center flex-wrap gap-2">
+                        <button class="btn btn-outline-primary active" data-category="all">All Posts</button>
+                        <button class="btn btn-outline-primary" data-category="networking">Networking</button>
+                        <button class="btn btn-outline-primary" data-category="web-dev">Web Development</button>
+                        <button class="btn btn-outline-primary" data-category="hardware">Hardware</button>
+                        <button class="btn btn-outline-primary" data-category="tips">Tech Tips</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Featured Post -->
+    <section class="py-5">
+        <div class="container">
+            <div class="row">
+                <div class="col-12" data-aos="fade-up">
+                    <div class="featured-post">
+                        <div class="row align-items-center">
+                            <div class="col-lg-6">
+                                <img src="https://images.unsplash.com/photo-1581092162384-8987c1d64718?w=600&h=400&fit=crop" 
+                                     alt="Featured Post" class="img-fluid rounded shadow">
+                            </div>
+                            <div class="col-lg-6">
+                                <div class="featured-content">
+                                    <span class="badge bg-primary mb-2">Featured</span>
+                                    <h2 class="mb-3">The Future of Network Security in 2024</h2>
+                                    <p class="text-muted mb-3">
+                                        Explore the latest trends and technologies shaping network security, 
+                                        including AI-powered threat detection and zero-trust architecture.
+                                    </p>
+                                    <div class="post-meta mb-3">
+                                        <span class="text-muted">
+                                            <i class="bi bi-calendar me-1"></i>December 15, 2024
+                                        </span>
+                                        <span class="text-muted ms-3">
+                                            <i class="bi bi-person me-1"></i>John Tech
+                                        </span>
+                                        <span class="text-muted ms-3">
+                                            <i class="bi bi-clock me-1"></i>5 min read
+                                        </span>
+                                    </div>
+                                    <a href="#" class="btn btn-primary">Read More</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Blog Posts Grid -->
+    <section class="py-5 bg-light">
+        <div class="container">
+            <div class="row g-4" id="blogGrid">
+                <!-- Networking Posts -->
+                <div class="col-lg-4 col-md-6 blog-post" data-category="networking" data-aos="fade-up">
+                    <div class="blog-card h-100">
+                        <div class="blog-image">
+                            <img src="https://images.unsplash.com/photo-1573164713714-d95e436ab8d6?w=400&h=250&fit=crop" 
+                                 alt="African Network Setup" class="img-fluid">
+                            <div class="blog-category">Networking</div>
+                        </div>
+                        <div class="blog-content">
+                            <h5>Setting Up a Secure Business Network</h5>
+                            <p class="text-muted">Learn the essential steps to create a robust and secure network infrastructure for your business.</p>
+                            <div class="blog-meta">
+                                <small class="text-muted">
+                                    <i class="bi bi-calendar me-1"></i>Dec 10, 2024
+                                    <span class="ms-3"><i class="bi bi-clock me-1"></i>4 min read</span>
+                                </small>
+                            </div>
+                            <a href="#" class="btn btn-outline-primary btn-sm mt-3">Read More</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Web Development Posts -->
+                <div class="col-lg-4 col-md-6 blog-post" data-category="web-dev" data-aos="fade-up" data-aos-delay="100">
+                    <div class="blog-card h-100">
+                        <div class="blog-image">
+                            <img src="https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?w=400&h=250&fit=crop" 
+                                 alt="African Web Development" class="img-fluid">
+                            <div class="blog-category">Web Development</div>
+                        </div>
+                        <div class="blog-content">
+                            <h5>Modern Web Development Trends</h5>
+                            <p class="text-muted">Discover the latest trends in web development that are shaping the digital landscape in 2024.</p>
+                            <div class="blog-meta">
+                                <small class="text-muted">
+                                    <i class="bi bi-calendar me-1"></i>Dec 8, 2024
+                                    <span class="ms-3"><i class="bi bi-clock me-1"></i>6 min read</span>
+                                </small>
+                            </div>
+                            <a href="#" class="btn btn-outline-primary btn-sm mt-3">Read More</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Hardware Posts -->
+                <div class="col-lg-4 col-md-6 blog-post" data-category="hardware" data-aos="fade-up" data-aos-delay="200">
+                    <div class="blog-card h-100">
+                        <div class="blog-image">
+                            <img src="https://images.unsplash.com/photo-1560472354-b33ff0c44a43?w=400&h=250&fit=crop" 
+                                 alt="African PC Building" class="img-fluid">
+                            <div class="blog-category">Hardware</div>
+                        </div>
+                        <div class="blog-content">
+                            <h5>Building Your First Gaming PC</h5>
+                            <p class="text-muted">A comprehensive guide to selecting components and assembling your own high-performance gaming computer.</p>
+                            <div class="blog-meta">
+                                <small class="text-muted">
+                                    <i class="bi bi-calendar me-1"></i>Dec 5, 2024
+                                    <span class="ms-3"><i class="bi bi-clock me-1"></i>8 min read</span>
+                                </small>
+                            </div>
+                            <a href="#" class="btn btn-outline-primary btn-sm mt-3">Read More</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Tech Tips Posts -->
+                <div class="col-lg-4 col-md-6 blog-post" data-category="tips" data-aos="fade-up">
+                    <div class="blog-card h-100">
+                        <div class="blog-image">
+                            <img src="https://images.unsplash.com/photo-1582213782179-e0d53f98f2ca?w=400&h=250&fit=crop" 
+                                 alt="African Tech Tips" class="img-fluid">
+                            <div class="blog-category">Tech Tips</div>
+                        </div>
+                        <div class="blog-content">
+                            <h5>10 Essential Cybersecurity Tips</h5>
+                            <p class="text-muted">Protect your business and personal data with these fundamental cybersecurity best practices.</p>
+                            <div class="blog-meta">
+                                <small class="text-muted">
+                                    <i class="bi bi-calendar me-1"></i>Dec 3, 2024
+                                    <span class="ms-3"><i class="bi bi-clock me-1"></i>5 min read</span>
+                                </small>
+                            </div>
+                            <a href="#" class="btn btn-outline-primary btn-sm mt-3">Read More</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-4 col-md-6 blog-post" data-category="networking" data-aos="fade-up" data-aos-delay="100">
+                    <div class="blog-card h-100">
+                        <div class="blog-image">
+                            <img src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=400&h=250&fit=crop" 
+                                 alt="African Cloud Computing" class="img-fluid">
+                            <div class="blog-category">Networking</div>
+                        </div>
+                        <div class="blog-content">
+                            <h5>Cloud vs On-Premise Solutions</h5>
+                            <p class="text-muted">Compare the benefits and drawbacks of cloud-based versus on-premise IT infrastructure for your business.</p>
+                            <div class="blog-meta">
+                                <small class="text-muted">
+                                    <i class="bi bi-calendar me-1"></i>Dec 1, 2024
+                                    <span class="ms-3"><i class="bi bi-clock me-1"></i>7 min read</span>
+                                </small>
+                            </div>
+                            <a href="#" class="btn btn-outline-primary btn-sm mt-3">Read More</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-4 col-md-6 blog-post" data-category="web-dev" data-aos="fade-up" data-aos-delay="200">
+                    <div class="blog-card h-100">
+                        <div class="blog-image">
+                            <img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=400&h=250&fit=crop" 
+                                 alt="E-commerce" class="img-fluid">
+                            <div class="blog-category">Web Development</div>
+                        </div>
+                        <div class="blog-content">
+                            <h5>E-commerce Best Practices</h5>
+                            <p class="text-muted">Essential strategies for creating successful online stores that convert visitors into customers.</p>
+                            <div class="blog-meta">
+                                <small class="text-muted">
+                                    <i class="bi bi-calendar me-1"></i>Nov 28, 2024
+                                    <span class="ms-3"><i class="bi bi-clock me-1"></i>6 min read</span>
+                                </small>
+                            </div>
+                            <a href="#" class="btn btn-outline-primary btn-sm mt-3">Read More</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Pagination -->
+            <div class="row mt-5">
+                <div class="col-12">
+                    <nav aria-label="Blog pagination">
+                        <ul class="pagination justify-content-center">
+                            <li class="page-item disabled">
+                                <a class="page-link" href="#" tabindex="-1">Previous</a>
+                            </li>
+                            <li class="page-item active">
+                                <a class="page-link" href="#">1</a>
+                            </li>
+                            <li class="page-item">
+                                <a class="page-link" href="#">2</a>
+                            </li>
+                            <li class="page-item">
+                                <a class="page-link" href="#">3</a>
+                            </li>
+                            <li class="page-item">
+                                <a class="page-link" href="#">Next</a>
+                            </li>
+                        </ul>
+                    </nav>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Newsletter Section -->
+    <section class="py-5">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-lg-8 text-center" data-aos="fade-up">
+                    <h2 class="mb-4">Stay Updated</h2>
+                    <p class="lead mb-4">Subscribe to our newsletter for the latest tech insights and updates.</p>
+                    <form class="newsletter-signup">
+                        <div class="input-group input-group-lg">
+                            <input type="email" class="form-control" placeholder="Enter your email address">
+                            <button class="btn btn-primary" type="submit">
+                                <i class="bi bi-send me-2"></i>Subscribe
+                            </button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-dark text-light py-5">
+        <div class="container">
+            <div class="row g-4">
+                <div class="col-lg-4">
+                        <h5 class="fw-bold mb-3">
+                            <i class="bi bi-cpu-fill me-2"></i>KDTech Solutions
+                        </h5>
+                        <p>Your trusted African partner for technology solutions.</p>
+                </div>
+                <div class="col-lg-4">
+                    <h6 class="fw-bold mb-3">Quick Links</h6>
+                    <ul class="list-unstyled">
+                        <li><a href="index.html" class="text-light-emphasis">Home</a></li>
+                        <li><a href="services.html" class="text-light-emphasis">Services</a></li>
+                        <li><a href="products.html" class="text-light-emphasis">Products</a></li>
+                        <li><a href="contact.html" class="text-light-emphasis">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-4">
+                    <h6 class="fw-bold mb-3">Contact Info</h6>
+                    <p><i class="bi bi-envelope me-2"></i>info@kdtech.co.ke</p>
+                    <p><i class="bi bi-phone me-2"></i>+254 700 123 456</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Bootstrap 5 JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- AOS Animation JS -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <!-- Custom JS -->
+    <script src="js/script.js"></script>
+    
+    <!-- Blog Filter Script -->
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const categoryButtons = document.querySelectorAll('[data-category]');
+            const blogPosts = document.querySelectorAll('.blog-post');
+            
+            categoryButtons.forEach(button => {
+                button.addEventListener('click', function() {
+                    const category = this.dataset.category;
+                    
+                    // Update active button
+                    categoryButtons.forEach(btn => btn.classList.remove('active'));
+                    this.classList.add('active');
+                    
+                    // Filter posts
+                    blogPosts.forEach(post => {
+                        if (category === 'all' || post.dataset.category === category) {
+                            post.style.display = 'block';
+                            post.classList.add('fade-in');
+                        } else {
+                            post.style.display = 'none';
+                            post.classList.remove('fade-in');
+                        }
+                    });
+                });
+            });
+        });
+    </script>
+</body>
+</html>

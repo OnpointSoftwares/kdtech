@@ -1,0 +1,23 @@
+User-agent: *
+Allow: /
+
+# Sitemap
+Sitemap: https://kdtech.co.ke/sitemap.xml
+
+# Disallow admin areas (if any)
+Disallow: /admin/
+Disallow: /private/
+Disallow: /.git/
+
+# Allow important pages
+Allow: /index.html
+Allow: /services.html
+Allow: /products.html
+Allow: /contact.html
+Allow: /blog.html
+Allow: /css/
+Allow: /js/
+Allow: /assets/
+
+# Crawl-delay for respectful crawling
+Crawl-delay: 1
