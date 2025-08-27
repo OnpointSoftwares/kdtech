@@ -1,0 +1,424 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Our Portfolio - KDTech Solutions</title>
+    
+    <!-- Bootstrap 5 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Bootstrap Icons -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css" rel="stylesheet">
+    <!-- FontAwesome -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+    <!-- AOS Animation Library -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <!-- Custom CSS -->
+    <link href="css/style.css" rel="stylesheet">
+</head>
+<body>
+
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-dark fixed-top" id="navbar">
+        <div class="container">
+            <a class="navbar-brand fw-bold" href="index.html">
+                <i class="bi bi-cpu-fill me-2"></i>KDTech
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="services.html">Services</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" href="portfolio.html">Portfolio</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="products.html">Products</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="contact.html">Contact</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="blog.html">Blog</a>
+                    </li>
+                </ul>
+                <!-- Theme Toggle -->
+                <div class="theme-toggle ms-3">
+                    <button class="btn btn-outline-light btn-sm" id="themeToggle">
+                        <i class="fas fa-moon" id="themeIcon"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero-section d-flex align-items-center">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-6" data-aos="fade-right">
+                    <h1 class="display-4 fw-bold mb-4">Our Portfolio</h1>
+                    <p class="lead mb-4">
+                        Explore our successful projects and see how we've helped businesses across Kenya 
+                        transform their operations with cutting-edge technology solutions.
+                    </p>
+                    <div class="hero-stats">
+                        <div class="row text-center">
+                            <div class="col-4">
+                                <div class="stat-item">
+                                    <h3 class="fw-bold text-primary">150+</h3>
+                                    <p class="mb-0">Projects Completed</p>
+                                </div>
+                            </div>
+                            <div class="col-4">
+                                <div class="stat-item">
+                                    <h3 class="fw-bold text-primary">50+</h3>
+                                    <p class="mb-0">Happy Clients</p>
+                                </div>
+                            </div>
+                            <div class="col-4">
+                                <div class="stat-item">
+                                    <h3 class="fw-bold text-primary">5+</h3>
+                                    <p class="mb-0">Years Experience</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6" data-aos="fade-left">
+                    <div class="hero-image text-center">
+                        <img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" 
+                             alt="Portfolio Projects" class="img-fluid rounded shadow">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Portfolio Filter -->
+    <section class="py-5 bg-light">
+        <div class="container">
+            <div class="row">
+                <div class="col-12 text-center mb-5">
+                    <h2 class="display-5 fw-bold mb-3">Featured Projects</h2>
+                    <p class="lead text-muted">Filter by category to see specific types of projects</p>
+                </div>
+            </div>
+            
+            <!-- Filter Buttons -->
+            <div class="row mb-5">
+                <div class="col-12 text-center">
+                    <div class="btn-group" role="group" aria-label="Portfolio Filter">
+                        <button type="button" class="btn btn-outline-primary active" data-filter="all">All Projects</button>
+                        <button type="button" class="btn btn-outline-primary" data-filter="web">Web Development</button>
+                        <button type="button" class="btn btn-outline-primary" data-filter="mobile">Mobile Apps</button>
+                        <button type="button" class="btn btn-outline-primary" data-filter="network">Networking</button>
+                        <button type="button" class="btn btn-outline-primary" data-filter="ecommerce">E-commerce</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Portfolio Grid -->
+            <div class="row g-4" id="portfolio-grid">
+                <!-- Portfolio items will be loaded dynamically -->
+            </div>
+
+            <!-- Load More Button -->
+            <div class="row mt-5">
+                <div class="col-12 text-center">
+                    <button class="btn btn-primary btn-lg" id="loadMoreBtn">
+                        <i class="fas fa-plus me-2"></i>Load More Projects
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Client Testimonials -->
+    <section class="py-5">
+        <div class="container">
+            <div class="row">
+                <div class="col-12 text-center mb-5">
+                    <h2 class="display-5 fw-bold mb-3">What Our Clients Say</h2>
+                    <p class="lead text-muted">Real feedback from our satisfied customers</p>
+                </div>
+            </div>
+            
+            <div class="row g-4" id="testimonials-grid">
+                <!-- Testimonials will be loaded dynamically -->
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="py-5 bg-primary text-white">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-8">
+                    <h2 class="display-6 fw-bold mb-3">Ready to Start Your Project?</h2>
+                    <p class="lead mb-0">Let's discuss how we can help transform your business with technology.</p>
+                </div>
+                <div class="col-lg-4 text-lg-end">
+                    <a href="contact.html" class="btn btn-light btn-lg">
+                        <i class="fas fa-rocket me-2"></i>Get Started
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-dark text-white py-5">
+        <div class="container">
+            <div class="row g-4">
+                <div class="col-lg-4">
+                    <h5 class="fw-bold mb-3">
+                        <i class="bi bi-cpu-fill me-2"></i>KDTech Solutions
+                    </h5>
+                    <p class="mb-3">Empowering African businesses with cutting-edge technology solutions.</p>
+                    <div class="social-links">
+                        <a href="#" class="text-white me-3"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" class="text-white me-3"><i class="fab fa-twitter"></i></a>
+                        <a href="#" class="text-white me-3"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="#" class="text-white"><i class="fab fa-instagram"></i></a>
+                    </div>
+                </div>
+                <div class="col-lg-2 col-md-6">
+                    <h6 class="fw-bold mb-3">Services</h6>
+                    <ul class="list-unstyled">
+                        <li><a href="services.html" class="text-white-50">Web Development</a></li>
+                        <li><a href="services.html" class="text-white-50">Mobile Apps</a></li>
+                        <li><a href="services.html" class="text-white-50">Networking</a></li>
+                        <li><a href="services.html" class="text-white-50">IT Support</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-2 col-md-6">
+                    <h6 class="fw-bold mb-3">Company</h6>
+                    <ul class="list-unstyled">
+                        <li><a href="index.html" class="text-white-50">About Us</a></li>
+                        <li><a href="portfolio.html" class="text-white-50">Portfolio</a></li>
+                        <li><a href="blog.html" class="text-white-50">Blog</a></li>
+                        <li><a href="contact.html" class="text-white-50">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-4">
+                    <h6 class="fw-bold mb-3">Contact Info</h6>
+                    <div class="contact-info">
+                        <p class="mb-2"><i class="fas fa-map-marker-alt me-2"></i>Nairobi, Kenya</p>
+                        <p class="mb-2"><i class="fas fa-phone me-2"></i>+254 700 123 456</p>
+                        <p class="mb-2"><i class="fas fa-envelope me-2"></i>info@kdtechsolutions.co.ke</p>
+                    </div>
+                </div>
+            </div>
+            <hr class="my-4">
+            <div class="row align-items-center">
+                <div class="col-md-6">
+                    <p class="mb-0">&copy; 2024 KDTech Solutions. All rights reserved.</p>
+                </div>
+                <div class="col-md-6 text-md-end">
+                    <a href="#" class="text-white-50 me-3">Privacy Policy</a>
+                    <a href="#" class="text-white-50">Terms of Service</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Bootstrap 5 JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- AOS Animation -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <!-- API Integration -->
+    <script src="js/api-integration.js"></script>
+    <!-- Custom JS -->
+    <script src="js/script.js"></script>
+    
+    <script>
+        // Initialize AOS
+        AOS.init({
+            duration: 1000,
+            once: true
+        });
+
+        // Portfolio functionality
+        document.addEventListener('DOMContentLoaded', function() {
+            const portfolioGrid = document.getElementById('portfolio-grid');
+            const filterButtons = document.querySelectorAll('[data-filter]');
+            const loadMoreBtn = document.getElementById('loadMoreBtn');
+            let currentFilter = 'all';
+            let currentPage = 1;
+            const itemsPerPage = 6;
+
+            // Initialize API integration
+            const api = new KDTechAPI();
+
+            // Load portfolio items
+            async function loadPortfolio(filter = 'all', page = 1, append = false) {
+                try {
+                    const response = await api.getPortfolio({ 
+                        category: filter === 'all' ? '' : filter,
+                        page: page,
+                        limit: itemsPerPage 
+                    });
+                    
+                    if (response.success) {
+                        const items = response.data;
+                        
+                        if (!append) {
+                            portfolioGrid.innerHTML = '';
+                        }
+                        
+                        items.forEach((item, index) => {
+                            const portfolioItem = createPortfolioItem(item, index);
+                            portfolioGrid.appendChild(portfolioItem);
+                        });
+
+                        // Hide load more button if no more items
+                        if (items.length < itemsPerPage) {
+                            loadMoreBtn.style.display = 'none';
+                        } else {
+                            loadMoreBtn.style.display = 'block';
+                        }
+                    } else {
+                        // Show sample portfolio items if API fails
+                        showSamplePortfolio(append);
+                    }
+                } catch (error) {
+                    console.error('Error loading portfolio:', error);
+                    showSamplePortfolio(append);
+                }
+            }
+
+            // Create portfolio item HTML
+            function createPortfolioItem(item, index) {
+                const div = document.createElement('div');
+                div.className = 'col-lg-4 col-md-6';
+                div.setAttribute('data-aos', 'fade-up');
+                div.setAttribute('data-aos-delay', (index % 3) * 100 + 100);
+                
+                div.innerHTML = `
+                    <div class="portfolio-item">
+                        <div class="portfolio-image">
+                            <img src="${item.image_url || 'https://images.unsplash.com/photo-1460925895917-afdab827c52f?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80'}" 
+                                 alt="${item.title}" class="img-fluid">
+                            <div class="portfolio-overlay">
+                                <div class="portfolio-content">
+                                    <h5>${item.title}</h5>
+                                    <p>${item.short_description}</p>
+                                    <div class="portfolio-links">
+                                        <a href="#" class="btn btn-light btn-sm me-2" data-bs-toggle="modal" data-bs-target="#portfolioModal" data-project-id="${item.id}">
+                                            <i class="fas fa-eye"></i> View Details
+                                        </a>
+                                        ${item.demo_url ? `<a href="${item.demo_url}" class="btn btn-primary btn-sm" target="_blank"><i class="fas fa-external-link-alt"></i> Live Demo</a>` : ''}
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="portfolio-info p-3">
+                            <h6 class="mb-2">${item.title}</h6>
+                            <p class="text-muted small mb-2">${item.short_description}</p>
+                            <div class="portfolio-meta">
+                                <span class="badge bg-primary">${item.category_name || 'Web Development'}</span>
+                                ${item.technologies ? item.technologies.split(',').map(tech => `<span class="badge bg-secondary">${tech.trim()}</span>`).join(' ') : ''}
+                            </div>
+                        </div>
+                    </div>
+                `;
+                
+                return div;
+            }
+
+            // Show sample portfolio items
+            function showSamplePortfolio(append = false) {
+                const sampleItems = [
+                    {
+                        id: 1,
+                        title: 'E-commerce Platform',
+                        short_description: 'Modern online store with payment integration',
+                        image_url: 'https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80',
+                        category_name: 'E-commerce',
+                        technologies: 'PHP, MySQL, Bootstrap'
+                    },
+                    {
+                        id: 2,
+                        title: 'Mobile Banking App',
+                        short_description: 'Secure mobile banking solution',
+                        image_url: 'https://images.unsplash.com/photo-1512941937669-90a1b58e7e9c?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80',
+                        category_name: 'Mobile App',
+                        technologies: 'React Native, Node.js'
+                    },
+                    {
+                        id: 3,
+                        title: 'Corporate Network Setup',
+                        short_description: 'Complete office network infrastructure',
+                        image_url: 'https://images.unsplash.com/photo-1558494949-ef010cbdcc31?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80',
+                        category_name: 'Networking',
+                        technologies: 'Cisco, Ubiquiti, Mikrotik'
+                    },
+                    {
+                        id: 4,
+                        title: 'School Management System',
+                        short_description: 'Comprehensive school administration platform',
+                        image_url: 'https://images.unsplash.com/photo-1503676260728-1c00da094a0b?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80',
+                        category_name: 'Web Development',
+                        technologies: 'Laravel, Vue.js, MySQL'
+                    },
+                    {
+                        id: 5,
+                        title: 'Restaurant POS System',
+                        short_description: 'Point of sale system for restaurants',
+                        image_url: 'https://images.unsplash.com/photo-1414235077428-338989a2e8c0?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80',
+                        category_name: 'Desktop App',
+                        technologies: 'C#, .NET, SQLite'
+                    },
+                    {
+                        id: 6,
+                        title: 'Inventory Management',
+                        short_description: 'Real-time inventory tracking system',
+                        image_url: 'https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80',
+                        category_name: 'Web Development',
+                        technologies: 'React, Node.js, MongoDB'
+                    }
+                ];
+
+                if (!append) {
+                    portfolioGrid.innerHTML = '';
+                }
+
+                sampleItems.forEach((item, index) => {
+                    const portfolioItem = createPortfolioItem(item, index);
+                    portfolioGrid.appendChild(portfolioItem);
+                });
+            }
+
+            // Filter functionality
+            filterButtons.forEach(button => {
+                button.addEventListener('click', function() {
+                    // Update active button
+                    filterButtons.forEach(btn => btn.classList.remove('active'));
+                    this.classList.add('active');
+                    
+                    // Update filter and reload
+                    currentFilter = this.getAttribute('data-filter');
+                    currentPage = 1;
+                    loadPortfolio(currentFilter, currentPage, false);
+                });
+            });
+
+            // Load more functionality
+            loadMoreBtn.addEventListener('click', function() {
+                currentPage++;
+                loadPortfolio(currentFilter, currentPage, true);
+            });
+
+            // Initial load
+            loadPortfolio();
+        });
+    </script>
+</body>
+</html>

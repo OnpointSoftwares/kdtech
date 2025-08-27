@@ -1,0 +1,238 @@
+<!-- Order Modal -->
+<div class="modal fade" id="orderModal" tabindex="-1" aria-labelledby="orderModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="orderModalLabel">
+                    <i class="fas fa-shopping-cart"></i> Place Order
+                </h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <form id="orderForm" class="needs-validation" novalidate>
+                <div class="modal-body">
+                    <!-- Order Item Info -->
+                    <div class="order-item-info mb-4 p-3 bg-light rounded">
+                        <h6>Order Item:</h6>
+                        <p class="mb-1"><strong id="order-item-name">Product/Service Name</strong></p>
+                        <p class="mb-0 text-muted" id="order-item-price">Price will be displayed here</p>
+                        <input type="hidden" id="order-item-type" name="order_item_type">
+                        <input type="hidden" id="order-item-id" name="order_item_id">
+                        <input type="hidden" name="order_item_name">
+                        <input type="hidden" name="unit_price">
+                    </div>
+
+                    <div class="row">
+                        <!-- Customer Information -->
+                        <div class="col-md-6">
+                            <h6 class="mb-3">Customer Information</h6>
+                            
+                            <div class="mb-3">
+                                <label for="customer_name" class="form-label">Full Name *</label>
+                                <input type="text" class="form-control" id="customer_name" name="customer_name" required>
+                                <div class="invalid-feedback">Please provide your full name.</div>
+                            </div>
+                            
+                            <div class="mb-3">
+                                <label for="customer_email" class="form-label">Email Address *</label>
+                                <input type="email" class="form-control" id="customer_email" name="customer_email" required>
+                                <div class="invalid-feedback">Please provide a valid email address.</div>
+                            </div>
+                            
+                            <div class="mb-3">
+                                <label for="customer_phone" class="form-label">Phone Number *</label>
+                                <input type="tel" class="form-control" id="customer_phone" name="customer_phone" required>
+                                <div class="invalid-feedback">Please provide your phone number.</div>
+                            </div>
+                            
+                            <div class="mb-3">
+                                <label for="company_name" class="form-label">Company Name</label>
+                                <input type="text" class="form-control" id="company_name" name="company_name">
+                            </div>
+                        </div>
+
+                        <!-- Order Details -->
+                        <div class="col-md-6">
+                            <h6 class="mb-3">Order Details</h6>
+                            
+                            <div class="mb-3">
+                                <label for="quantity" class="form-label">Quantity</label>
+                                <input type="number" class="form-control" id="quantity" name="quantity" value="1" min="1" max="100">
+                            </div>
+                            
+                            <div class="mb-3">
+                                <label for="billing_address" class="form-label">Billing Address *</label>
+                                <textarea class="form-control" id="billing_address" name="billing_address" rows="3" required></textarea>
+                                <div class="invalid-feedback">Please provide your billing address.</div>
+                            </div>
+                            
+                            <div class="mb-3">
+                                <label for="notes" class="form-label">Special Instructions</label>
+                                <textarea class="form-control" id="notes" name="notes" rows="3" placeholder="Any special requirements or notes..."></textarea>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Terms and Conditions -->
+                    <div class="mt-4">
+                        <div class="form-check">
+                            <input class="form-check-input" type="checkbox" id="terms_accepted" required>
+                            <label class="form-check-label" for="terms_accepted">
+                                I agree to the <a href="#" target="_blank">Terms and Conditions</a> and <a href="#" target="_blank">Privacy Policy</a> *
+                            </label>
+                            <div class="invalid-feedback">You must agree to the terms and conditions.</div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancel</button>
+                    <button type="submit" class="btn btn-primary" data-original-text="Place Order">
+                        <i class="fas fa-shopping-cart"></i> Place Order
+                    </button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+
+<!-- Quote Modal -->
+<div class="modal fade" id="quoteModal" tabindex="-1" aria-labelledby="quoteModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="quoteModalLabel">
+                    <i class="fas fa-file-invoice"></i> Request Quote
+                </h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <form id="quoteForm" class="needs-validation" novalidate>
+                <div class="modal-body">
+                    <div class="row">
+                        <!-- Customer Information -->
+                        <div class="col-md-6">
+                            <h6 class="mb-3">Contact Information</h6>
+                            
+                            <div class="mb-3">
+                                <label for="quote_customer_name" class="form-label">Full Name *</label>
+                                <input type="text" class="form-control" id="quote_customer_name" name="customer_name" required>
+                                <div class="invalid-feedback">Please provide your full name.</div>
+                            </div>
+                            
+                            <div class="mb-3">
+                                <label for="quote_customer_email" class="form-label">Email Address *</label>
+                                <input type="email" class="form-control" id="quote_customer_email" name="customer_email" required>
+                                <div class="invalid-feedback">Please provide a valid email address.</div>
+                            </div>
+                            
+                            <div class="mb-3">
+                                <label for="quote_customer_phone" class="form-label">Phone Number</label>
+                                <input type="tel" class="form-control" id="quote_customer_phone" name="customer_phone">
+                            </div>
+                            
+                            <div class="mb-3">
+                                <label for="quote_company_name" class="form-label">Company Name</label>
+                                <input type="text" class="form-control" id="quote_company_name" name="company_name">
+                            </div>
+                        </div>
+
+                        <!-- Project Details -->
+                        <div class="col-md-6">
+                            <h6 class="mb-3">Project Details</h6>
+                            
+                            <div class="mb-3">
+                                <label for="service_type" class="form-label">Service Type *</label>
+                                <select class="form-select" id="service_type" name="service_type" required>
+                                    <option value="">Select a service...</option>
+                                    <option value="web_development">Web Development</option>
+                                    <option value="network_setup">Network Setup</option>
+                                    <option value="it_support">IT Support</option>
+                                    <option value="computer_sales">Computer Sales</option>
+                                    <option value="custom_software">Custom Software</option>
+                                    <option value="other">Other</option>
+                                </select>
+                                <div class="invalid-feedback">Please select a service type.</div>
+                            </div>
+                            
+                            <div class="mb-3">
+                                <label for="budget_range" class="form-label">Budget Range</label>
+                                <select class="form-select" id="budget_range" name="budget_range">
+                                    <option value="">Select budget range...</option>
+                                    <option value="under_50k">Under KES 50,000</option>
+                                    <option value="50k_100k">KES 50,000 - 100,000</option>
+                                    <option value="100k_250k">KES 100,000 - 250,000</option>
+                                    <option value="250k_500k">KES 250,000 - 500,000</option>
+                                    <option value="over_500k">Over KES 500,000</option>
+                                </select>
+                            </div>
+                            
+                            <div class="mb-3">
+                                <label for="timeline" class="form-label">Project Timeline</label>
+                                <select class="form-select" id="timeline" name="timeline">
+                                    <option value="">Select timeline...</option>
+                                    <option value="asap">ASAP</option>
+                                    <option value="1_month">Within 1 month</option>
+                                    <option value="2_3_months">2-3 months</option>
+                                    <option value="3_6_months">3-6 months</option>
+                                    <option value="flexible">Flexible</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Project Description -->
+                    <div class="mb-3">
+                        <label for="project_description" class="form-label">Project Description *</label>
+                        <textarea class="form-control" id="project_description" name="project_description" rows="4" 
+                                  placeholder="Please describe your project requirements in detail..." required></textarea>
+                        <div class="invalid-feedback">Please provide a project description.</div>
+                    </div>
+
+                    <!-- Requirements Checkboxes -->
+                    <div class="mb-3">
+                        <label class="form-label">Additional Requirements</label>
+                        <div class="row">
+                            <div class="col-md-6">
+                                <div class="form-check">
+                                    <input class="form-check-input" type="checkbox" id="req_hosting" name="requirements[]" value="hosting">
+                                    <label class="form-check-label" for="req_hosting">Web Hosting</label>
+                                </div>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="checkbox" id="req_domain" name="requirements[]" value="domain">
+                                    <label class="form-check-label" for="req_domain">Domain Registration</label>
+                                </div>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="checkbox" id="req_seo" name="requirements[]" value="seo">
+                                    <label class="form-check-label" for="req_seo">SEO Optimization</label>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="form-check">
+                                    <input class="form-check-input" type="checkbox" id="req_maintenance" name="requirements[]" value="maintenance">
+                                    <label class="form-check-label" for="req_maintenance">Ongoing Maintenance</label>
+                                </div>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="checkbox" id="req_training" name="requirements[]" value="training">
+                                    <label class="form-check-label" for="req_training">User Training</label>
+                                </div>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="checkbox" id="req_support" name="requirements[]" value="support">
+                                    <label class="form-check-label" for="req_support">Technical Support</label>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancel</button>
+                    <button type="submit" class="btn btn-primary" data-original-text="Request Quote">
+                        <i class="fas fa-paper-plane"></i> Request Quote
+                    </button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+
+<!-- Notification Container -->
+<div class="notification-container position-fixed top-0 end-0 p-3" style="z-index: 9999;"></div>

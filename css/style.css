@@ -532,6 +532,71 @@ html {
     font-weight: bold;
 }
 
+/* Service Pricing */
+.service-price {
+    margin: 1.5rem 0;
+    padding: 1rem;
+    background: linear-gradient(135deg, #f8f9fa, #e9ecef);
+    border-radius: 10px;
+    border-left: 4px solid var(--primary-color);
+}
+
+.price-from {
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: var(--primary-color);
+}
+
+/* Service CTA */
+.service-cta {
+    background: linear-gradient(135deg, var(--primary-color), var(--accent-color)) !important;
+    border-radius: 15px;
+    box-shadow: var(--shadow-hover);
+}
+
+.service-cta h3 {
+    font-weight: 700;
+}
+
+.service-cta p {
+    opacity: 0.9;
+    font-size: 1.1rem;
+}
+
+/* Order Service Button */
+.order-service-btn {
+    width: 100%;
+    padding: 0.75rem 1.5rem;
+    font-weight: 600;
+    border-radius: 8px;
+    transition: var(--transition);
+}
+
+.order-service-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 15px rgba(0, 123, 255, 0.3);
+}
+
+/* Service Section Headers */
+.service-card .service-icon i {
+    font-size: 2rem;
+}
+
+/* Responsive Service Cards */
+@media (max-width: 768px) {
+    .service-card {
+        margin-bottom: 2rem;
+    }
+    
+    .service-price {
+        margin: 1rem 0;
+    }
+    
+    .service-cta {
+        margin-top: 3rem;
+    }
+}
+
 /* Carousel Styles */
 .carousel-image img {
     border-radius: 10px;
@@ -1605,5 +1670,387 @@ footer {
     .chatbot-toggle {
         bottom: 1rem;
         right: 1rem;
+    }
+}
+
+/* Portfolio Page Styles */
+.portfolio-item {
+    background: white;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: var(--shadow);
+    transition: var(--transition);
+    position: relative;
+}
+
+.portfolio-item:hover {
+    transform: translateY(-10px);
+    box-shadow: var(--shadow-hover);
+}
+
+.portfolio-image {
+    position: relative;
+    overflow: hidden;
+    height: 250px;
+}
+
+.portfolio-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: var(--transition);
+}
+
+.portfolio-item:hover .portfolio-image img {
+    transform: scale(1.1);
+}
+
+.portfolio-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(135deg, rgba(0, 123, 255, 0.9), rgba(0, 170, 255, 0.9));
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    transition: var(--transition);
+}
+
+.portfolio-item:hover .portfolio-overlay {
+    opacity: 1;
+}
+
+.portfolio-content {
+    text-align: center;
+    color: white;
+    padding: 2rem;
+}
+
+.portfolio-content h5 {
+    color: white;
+    margin-bottom: 1rem;
+    font-weight: 600;
+}
+
+.portfolio-content p {
+    margin-bottom: 1.5rem;
+    opacity: 0.9;
+}
+
+.portfolio-links .btn {
+    margin: 0.25rem;
+}
+
+.portfolio-info {
+    background: white;
+}
+
+.portfolio-info h6 {
+    color: var(--text-dark);
+    font-weight: 600;
+}
+
+.portfolio-meta {
+    margin-top: 1rem;
+}
+
+.portfolio-meta .badge {
+    margin-right: 0.5rem;
+    margin-bottom: 0.25rem;
+}
+
+/* Portfolio Filter */
+.btn-group .btn {
+    border-radius: 25px;
+    padding: 0.75rem 1.5rem;
+    font-weight: 600;
+    margin: 0 0.25rem;
+    transition: var(--transition);
+}
+
+.btn-group .btn.active {
+    background: var(--primary-color);
+    border-color: var(--primary-color);
+    color: white;
+}
+
+/* Hero Stats */
+.hero-stats {
+    margin-top: 2rem;
+}
+
+.stat-item h3 {
+    font-size: 2.5rem;
+    margin-bottom: 0.5rem;
+}
+
+.stat-item p {
+    font-size: 0.9rem;
+    color: var(--text-light);
+}
+
+/* Testimonial Cards */
+.testimonial-card {
+    background: white;
+    border-radius: 15px;
+    padding: 2rem;
+    box-shadow: var(--shadow);
+    transition: var(--transition);
+    border-left: 4px solid var(--primary-color);
+}
+
+.testimonial-card:hover {
+    transform: translateY(-5px);
+    box-shadow: var(--shadow-hover);
+}
+
+.testimonial-content {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.testimonial-content p {
+    flex: 1;
+    font-style: italic;
+    color: var(--text-light);
+    line-height: 1.6;
+}
+
+.testimonial-author {
+    display: flex;
+    align-items: center;
+    margin-top: auto;
+}
+
+.testimonial-author img {
+    width: 50px;
+    height: 50px;
+    object-fit: cover;
+}
+
+.testimonial-author h6 {
+    margin: 0;
+    color: var(--text-dark);
+    font-weight: 600;
+}
+
+.stars {
+    color: #ffc107;
+}
+
+/* Responsive Portfolio */
+@media (max-width: 768px) {
+    .portfolio-image {
+        height: 200px;
+    }
+    
+    .portfolio-content {
+        padding: 1rem;
+    }
+    
+    .btn-group {
+        flex-direction: column;
+        width: 100%;
+    }
+    
+    .btn-group .btn {
+        margin: 0.25rem 0;
+        width: 100%;
+    }
+    
+    .stat-item h3 {
+        font-size: 2rem;
+    }
+}
+
+/* E-commerce Styles */
+.product-card {
+    background: white;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: var(--shadow);
+    transition: var(--transition);
+    position: relative;
+}
+
+.product-card:hover {
+    transform: translateY(-5px);
+    box-shadow: var(--shadow-hover);
+}
+
+.product-image {
+    position: relative;
+    overflow: hidden;
+    height: 250px;
+}
+
+.product-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: var(--transition);
+}
+
+.product-card:hover .product-image img {
+    transform: scale(1.05);
+}
+
+.product-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(135deg, rgba(0, 123, 255, 0.9), rgba(0, 170, 255, 0.9));
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    transition: var(--transition);
+}
+
+.product-card:hover .product-overlay {
+    opacity: 1;
+}
+
+.product-badge {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    background: var(--accent-color);
+    color: white;
+    padding: 0.25rem 0.75rem;
+    border-radius: 15px;
+    font-size: 0.8rem;
+    font-weight: 600;
+    z-index: 2;
+}
+
+.product-title {
+    color: var(--text-dark);
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+}
+
+.product-description {
+    font-size: 0.9rem;
+    margin-bottom: 1rem;
+}
+
+.product-specs .badge {
+    font-size: 0.7rem;
+    margin-bottom: 0.25rem;
+}
+
+.product-price .price {
+    font-size: 1.25rem;
+    color: var(--primary-color);
+}
+
+/* Cart Styles */
+.cart-item-image {
+    border-radius: 8px;
+}
+
+.quantity-controls {
+    gap: 0.5rem;
+}
+
+.quantity-controls button {
+    width: 30px;
+    height: 30px;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Feature Cards */
+.feature-card {
+    padding: 2rem 1rem;
+    text-align: center;
+    transition: var(--transition);
+}
+
+.feature-card:hover {
+    transform: translateY(-5px);
+}
+
+.feature-icon {
+    width: 80px;
+    height: 80px;
+    background: linear-gradient(135deg, var(--primary-color), var(--accent-color));
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 1.5rem;
+    font-size: 2rem;
+    color: white;
+}
+
+.feature-card h5 {
+    color: var(--text-dark);
+    margin-bottom: 1rem;
+    font-weight: 600;
+}
+
+/* Payment Method Styles */
+.payment-methods .form-check {
+    padding: 1rem;
+    border: 2px solid var(--border-color);
+    border-radius: 10px;
+    transition: var(--transition);
+}
+
+.payment-methods .form-check:hover {
+    border-color: var(--primary-color);
+}
+
+.payment-methods .form-check-input:checked + .form-check-label {
+    color: var(--primary-color);
+    font-weight: 600;
+}
+
+.payment-details {
+    margin-top: 1rem;
+    padding: 1rem;
+    background: #f8f9fa;
+    border-radius: 10px;
+}
+
+/* Hero Features */
+.hero-features .feature-item {
+    padding: 0.75rem 0;
+    font-weight: 500;
+}
+
+.hero-features .feature-item i {
+    font-size: 1.1rem;
+}
+
+/* Responsive E-commerce */
+@media (max-width: 768px) {
+    .product-image {
+        height: 200px;
+    }
+    
+    .feature-icon {
+        width: 60px;
+        height: 60px;
+        font-size: 1.5rem;
+    }
+    
+    .product-overlay {
+        opacity: 1;
+        background: linear-gradient(135deg, rgba(0, 123, 255, 0.8), rgba(0, 170, 255, 0.8));
+    }
+    
+    .hero-features .row {
+        gap: 1rem;
     }
 }
